@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BMI Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Подключаем свои стили -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body data-bs-theme="dark">
+    <div class="container">
+      <h1 class="mt-1 mb-3 text-center">Калькулятор BMI 🌱</h1>
+      <div class="mb-3">
+        <label class="form-label">Вес</label>
+        <input
+          onkeyup="calculationBMI()"
+          placeholder="кг"
+          type="number"
+          class="form-control"
+          id="weight"
+        />
+        <div class="form-text">Введите вес</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Рост</label>
+        <input
+          onkeyup="calculationBMI()"
+          placeholder="см"
+          type="number"
+          class="form-control"
+          id="height"
+        />
+        <div class="form-text">Введите рост</div>
+      </div>
+
+      <div class="mb-3">
+        <div class="range_block"></div>
+        <input
+          value="50"
+          min="0"
+          max="100"
+          type="range"
+          class="form-range"
+          id="disabledRange"
+          disabled
+        />
+      </div>
+      <div class="card p-3 mb-3">
+        <h3 id="displayText" class="text-center">
+          Знание своего индекса массы тела поможет тебе сделать первые шаги к
+          здоровому образу жизни! Let's GO! ⚡
+        </h3>
+      </div>
+
+      <div class="mb-3 text-center">
+        <button
+          id="changeTheme"
+          class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2"
+        >
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Тёмная тема</span>
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Подключаем свой скрипт -->
+    <script src="main.js"></script>
+  </body>
+</html>

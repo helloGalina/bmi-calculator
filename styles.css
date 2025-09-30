@@ -1,0 +1,6 @@
+.range_block {
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(90deg, red, yellow, green, yellow, red);
+}
